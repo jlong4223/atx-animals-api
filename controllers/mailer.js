@@ -1,5 +1,6 @@
 const transporter = require("../config/nodemailer-config");
-// require("dotenv").config();
+const cron = require("node-cron");
+require("dotenv").config();
 
 // TODO change the mailOptions to equal req.body from react
 const sendMessage = (req, res, next) => {
@@ -20,5 +21,19 @@ const sendMessage = (req, res, next) => {
         });
   });
 };
+
+let reminderMail = {
+  from: process.env.EMAIL,
+  to: process.env.EMAIL,
+  subject: "Daily reminder to respond to interested adopters",
+  text:
+    "This is your daily reminder to respond to interested adopters. Let's get these pups a forever home! 🐶 ",
+};
+
+cron.schedule("* * * * *", () => {
+  transporter.sendMail(reminderMail, (err, info) => {
+    err ? console.log(err) : console.log("Email sent: " + info.response);
+  });
+});
 
 module.exports = { sendMessage };
