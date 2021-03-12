@@ -10,3 +10,6 @@
 - Morgan
 - Postman
 - jsonwebtoken
+- bcrypt
+- Nodemailer
+- OAuth2
