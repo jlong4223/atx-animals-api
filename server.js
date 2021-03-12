@@ -2,7 +2,8 @@ const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
 const app = express();
-// require('dotenv').config()
+require("dotenv").config();
+require("./config/db-config");
 
 // TODO import routes
 const homeRoute = require("./routes/welcome");
