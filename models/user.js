@@ -13,6 +13,7 @@ const userSchema = new Schema(
       unique: true,
     },
     password: String,
+    admin: Boolean,
   },
   {
     timestamps: true,
