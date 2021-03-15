@@ -8,6 +8,7 @@ module.exports = {
   signup,
   login,
   getUsers,
+  getAdmin,
 };
 
 async function signup(req, res) {
@@ -52,5 +53,10 @@ function createJWT(user) {
 
 async function getUsers(req, res) {
   const user = await User.find({});
+  res.json(user);
+}
+
+async function getAdmin(req, res) {
+  const user = await User.find({ admin: true });
   res.json(user);
 }
