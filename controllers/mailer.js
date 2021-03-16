@@ -30,7 +30,8 @@ let reminderMail = {
     "This is your daily reminder to respond to interested adopters. Let's get these pups a forever home! 🐶 ",
 };
 
-cron.schedule("* * * * *", () => {
+// TODO a reminder email is sent every 60 minutes
+cron.schedule("1-10 * * * *", () => {
   transporter.sendMail(reminderMail, (err, info) => {
     err ? console.log(err) : console.log("Email sent: " + info.response);
   });

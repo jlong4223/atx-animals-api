@@ -14,3 +14,7 @@
 - Nodemailer
 - OAuth2
 - Node-Cron
+
+### Future enchancments
+
+- multer for img upload
