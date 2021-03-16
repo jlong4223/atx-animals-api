@@ -37,7 +37,7 @@ async function updateAnimal(req, res) {
       req.params.id,
       req.body
     );
-    res.json(updateTheAnimal);
+    res.status(200).json(updateTheAnimal);
   } catch (err) {
     res.json(err);
   }
