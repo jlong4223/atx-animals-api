@@ -10,4 +10,12 @@ router.post("/animals", animalCtrl.createAnimal);
 router.put("/animals/:id", animalCtrl.updateAnimal);
 router.delete("/animals/:id", animalCtrl.deleteAnimal);
 
+// TODO working on image upload
+// const fileUpload = require("express-fileupload");
+// router.use(fileUpload());
+
+// router.post('/animals', function(req, res){
+
+// })
+
 module.exports = router;
