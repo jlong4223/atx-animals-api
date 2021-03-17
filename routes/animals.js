@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const animalCtrl = require("../controllers/animals");
-const { route } = require("./welcome");
 
 router.get("/animals", animalCtrl.showAnimals);
 router.get("/animals/:id", animalCtrl.showOneAnimal);
