@@ -1,5 +1,7 @@
 # ATX Animals API
 
+This is the backend API for ATX-Animals Client.
+
 ### Technologies Used:
 
 - Node.js
@@ -10,6 +12,7 @@
 - Morgan
 - Postman
 - jsonwebtoken
+- Token based auth
 - bcrypt
 - Nodemailer
 - OAuth2
