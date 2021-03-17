@@ -24,6 +24,7 @@ async function showOneAnimal(req, res) {
 
 async function createAnimal(req, res) {
   try {
+    console.log(req.user);
     await Animal.create(req.body);
     showAnimals(req, res);
   } catch (err) {
@@ -33,6 +34,7 @@ async function createAnimal(req, res) {
 
 async function updateAnimal(req, res) {
   try {
+    console.log(req.user);
     const updateTheAnimal = await Animal.findByIdAndUpdate(
       req.params.id,
       req.body
@@ -45,6 +47,7 @@ async function updateAnimal(req, res) {
 
 async function deleteAnimal(req, res) {
   try {
+    console.log(req.user);
     const deletedAnimal = await Animal.findByIdAndDelete(req.params.id);
     res.json(deletedAnimal);
   } catch (err) {
