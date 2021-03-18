@@ -9,9 +9,6 @@ module.exports = {
   showPending,
   showOpenTasks,
   showCompleted,
-  //   TODO :
-  // (these will need req.user.admin === true and check auth from config ), update, delete, etc
-  //   TODO add the ability to edit the pending, notPending, etc
 };
 
 /* ----- These controllers work with the data being sent from the adoption form ------ */
