@@ -3,12 +3,12 @@ const Task = require("../models/task");
 module.exports = {
   showTasks,
   createTask,
+  editTask,
+  deleteTask,
+  showTaskById,
   showPending,
   showOpenTasks,
   showCompleted,
-  //   TODO :
-  // (these will need req.user.admin === true and check auth from config ), update, delete, etc
-  //   TODO add the ability to edit the pending, notPending, etc
 };
 
 /* ----- These controllers work with the data being sent from the adoption form ------ */
@@ -16,6 +16,15 @@ module.exports = {
 async function showTasks(req, res) {
   const tasks = await Task.find({});
   res.json(tasks);
+}
+
+async function showTaskById(req, res) {
+  try {
+    const oneTask = await Task.findById(req.params.id);
+    res.json(oneTask);
+  } catch (err) {
+    res.json(err);
+  }
 }
 
 async function createTask(req, res) {
@@ -27,17 +36,40 @@ async function createTask(req, res) {
   }
 }
 
+async function editTask(req, res) {
+  try {
+    console.log(req.user);
+    const updateTheTask = await Task.findByIdAndUpdate(req.params.id, req.body);
+    res.status(200).json(updateTheTask);
+  } catch (err) {
+    res.json(err);
+  }
+}
+
+async function deleteTask(req, res) {
+  try {
+    console.log(req.user);
+    const deletedTask = await Task.findByIdAndDelete(req.params.id);
+    res.json(deletedTask);
+  } catch (err) {
+    res.json(err);
+  }
+}
+
 async function showOpenTasks(req, res) {
-  const task = await Task.find({ status: "" });
+  const task = await Task.find({ status: "open" });
+  //   console.log(req.user);
   res.json(task);
 }
 
 async function showPending(req, res) {
   const pendingTask = await Task.find({ status: "pending" });
+  //   console.log(req.user);
   res.json(pendingTask);
 }
 
 async function showCompleted(req, res) {
   const completedTask = await Task.find({ status: "completed" });
+  //   console.log(req.user);
   res.json(completedTask);
 }
