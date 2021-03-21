@@ -18,12 +18,4 @@ function checkAuth(req, res, next) {
   return res.status(401).json({ msg: "Not Authorized" });
 }
 
-// TODO working on image upload
-// const fileUpload = require("express-fileupload");
-// router.use(fileUpload());
-
-// router.post('/animals', function(req, res){
-
-// })
-
 module.exports = router;
