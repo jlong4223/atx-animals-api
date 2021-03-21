@@ -20,4 +20,4 @@ This is the backend API for ATX-Animals Client.
 
 ### Future enchancments
 
-- multer for img upload
+- multer and/or cloudinary for img upload
