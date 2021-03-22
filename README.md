@@ -8,6 +8,8 @@ This is the backend API for ATX-Animals Client.
 - Express.js
 - MongoDB
 - Mongoose
+- Mocha.js
+- Chai.js
 - Cors
 - Morgan
 - Postman
