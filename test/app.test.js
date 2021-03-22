@@ -60,6 +60,16 @@ describe("Server!", () => {
       });
   });
 
+  it("shows all of the admin users", (done) => {
+    chai
+      .request(server)
+      .get("/users/admin")
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        done();
+      });
+  });
+
   /* --------- Task/Adoption Post test --------*/
   it("posts to tasks", (done) => {
     chai
