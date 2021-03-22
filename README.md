@@ -19,6 +19,11 @@ This is the backend API for ATX-Animals Client.
 - Nodemailer
 - OAuth2
 - Node-Cron
+- heroku
+
+### Deployed API:
+
+[Click](https://atx-animals-api.herokuapp.com/) to view the deployed API. Some routes are not accessible to the public.
 
 ### Future enchancments
 
