@@ -10,6 +10,7 @@ This is the backend API for ATX-Animals Client.
 - Mongoose
 - Mocha.js
 - Chai.js
+- Husky
 - Cors
 - Morgan
 - Postman
