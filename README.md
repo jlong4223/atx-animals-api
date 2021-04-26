@@ -20,7 +20,7 @@ This is the backend API for ATX-Animals Client.
 - Nodemailer
 - OAuth2
 - Node-Cron
-- heroku
+- Heroku
 
 ### Deployed API:
 
