@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha",
-    "start": "node server.js"
+    "test": "mocha --exit",
+    "start": "node server.js",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
