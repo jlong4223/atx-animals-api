@@ -26,6 +26,12 @@ This is the backend API for ATX-Animals Client.
 
 [Click](https://atx-animals-api.herokuapp.com/) to view the deployed API. Some routes are not accessible to the public.
 
+### Screenshots
+
+##### This is a giphy of the husky pre-commit script running the tests.
+
+ <img src="https://media.giphy.com/media/wQQGkvkYKEyvAmRSwv/giphy.gif" alt="animated">
+
 ### Future enchancments
 
 - multer and/or cloudinary for img upload
